@@ -15,14 +15,19 @@ public class Worked {
         System.out.println("How many years have you worked?");
         int myYears = yeyo.nextInt();
 
-        if(myMoney >= bank) {
+        if (myMoney >= bank && myYears >= 3) {
             System.out.println("Yay! You qualify!");
-        } else
-            System.out.println("You need " + (bank - myMoney) + " more to qualify.");
+        }
+            else if (myMoney < bank && myYears > 3) {
+            System.out.println("You need " + (bank - myMoney) + " more to qualify");
+
+        } else if (myMoney <= bank && myYears < 3)
+            System.out.println("You need " + (bank - myMoney) + " more & " + (3 - myYears) + " more year(s)" + " to qualify.");
+    }
+
 
         }
 
 
 
-    }
 
